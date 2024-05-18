@@ -217,15 +217,6 @@ module.exports = {
     }
   },
 
-  loginPage: async (req, res, next) => {
-    try {
-      res.render("login.ejs");
-    } catch (error) {
-      Sentry.captureException(error);
-      next(error);
-    }
-  },
-
   resetPasswordPage: async (req, res, next) => {
     try {
       let { token } = req.query;
